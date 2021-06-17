@@ -1,0 +1,10 @@
+def largest( arr, n):
+    for i in range(0,n):
+        for j in range(0,n):
+            if arr[i]<arr[j]:
+                temp=0
+                temp=arr[j]
+                arr[j]=arr[i]
+                arr[i]=temp
+                
+    return arr[n-1]
