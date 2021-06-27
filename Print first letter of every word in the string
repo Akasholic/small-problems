@@ -1,0 +1,43 @@
+string firstAlphabet(string S)
+	{    string res;
+	int i=0;
+	int k=0;
+	    if(isalpha(S[0])){
+	       res=S[0];
+	        for( i=1;i<S.size();i++){
+	        
+	            if(isblank(S[i])){
+	                for(int j=i+1;j<S.size();j++){
+	                    if(isalpha(S[j])){
+	                    res=res+S[j];
+	                    break;
+	                    }
+	                }
+	            }
+	        }
+	 }
+	  else{
+	        for( i=1;i<S.size();i++){
+	        
+	            if(isalpha(S[i])){
+	             res=res+S[i];
+	             k=i;
+	             break;
+	            }
+	            
+	        }
+	        for(int l=k;l<S.size();l++){
+	        
+	            if(isblank(S[l])){
+	                for(int j=l+1;j<S.size();j++){
+	                    if(isalpha(S[j])){
+	                    res=res+S[j];   
+	                    break;
+	                    }
+	                }
+	            }
+	        }
+	        
+	 }
+	 return res;// Your code goes here
+	}
